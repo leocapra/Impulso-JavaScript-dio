@@ -18,9 +18,13 @@
     <h1>Olá, Mundo! (Hello, World!)</h1>
     <p>Já me livrei da maldição!</p>
     <script>
-        window.alert('Olá Mundo, (Hello, World!)'); //vai apenas dar um aviso
-        window.confirm('Já me livrei da maldição!'); //vai dar opção de ok e cancelar
-        window.prompt('Qual é o próximo passo?'); //vai perguntar o proximo passo
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert('A soma dos valores é: ' + String(s)) //concatenação
+        window.alert(`A soma de ${n1} + ${n2} é igual a ${s}`)
+        // number +  number para adição
+        //  string + string para concatenização 
     </script>
 </body>
 </html>
