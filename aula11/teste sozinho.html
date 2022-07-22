@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            padding: auto;
+            margin: auto;
+        }
+
+        div.numeros {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            width: 40vw;
+        }
+
+        input {
+            margin: 5px;
+            width: 10vw;
+            height: 10vw;
+        }
+
+        div.operacao {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+        }
+
+        section {
+            position: absolute;
+            margin-top: -45vw;
+            margin-left: 40%;
+        }
+
+        div.res {
+            display: flex;
+            margin: auto;
+            width: 60%;
+            height: 15vw;
+            text-align: center;
+            justify-content: center;
+            background-color: gray;
+        }
+
+        div#calc {
+            display: flex;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            margin-top: 5vw;
+        }
+
+        div.resultado input {
+            width: 20vw;
+            height: 5vw;
+        }
+
+        div.resultado {
+            position: absolute;
+            margin-top: -5vw;
+            margin-left: 30vw;
+        }
+
+        div.apagar input {
+            width: 20vw;
+            height: 5vw;
+        }
+
+        div.apagar {
+            position: absolute;
+            margin-top: -5vw;
+            margin-left: -23vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="res"></div>
+    <div id="calc">
+        <div class="numeros">
+            <div id="botao1"><input type="button" value="1" id="botao01"></div>
+            <div id="botao2"><input type="button" value="2" id="botao02"></div>
+            <div id="botao3"><input type="button" value="3" id="botao03"></div>
+            <div id="botao4"><input type="button" value="4" id="botao04"></div>
+            <div id="botao5"><input type="button" value="5" id="botao05"></div>
+            <div id="botao6"><input type="button" value="6" id="botao06"></div>
+            <div id="botao7"><input type="button" value="7" id="botao07"></div>
+            <div id="botao8"><input type="button" value="8" id="botao08"></div>
+            <div id="botao9"><input type="button" value="9" id="botao09"></div>
+            <div id="botao0"><input type="button" value="0" id="botao00"></div>
+        </div>
+        <div class="operacao">
+            <div id="multiplicacao"><input type="button" value="x" id="multiplicacao00"></div>
+            <div id="divisao"><input type="button" value="/" id="divisao00"></div>
+            <div id="soma"><input type="button" value="+" id="soma00"></div>
+            <div id="subtracao"><input type="button" value="-" id="subtracao00"></div>
+        </div>
+        <div class="resultado">
+            <div id="igual"><input type="button" value="=" id="igual00">
+            </div>
+        </div>
+        <div class="apagar">
+            <div id="apagar"><input type="button" value="C" id="apagar00">
+            </div>
+
+            <script>
+                //apagar / igual
+                var ap = document.querySelector('input#apagar00')
+
+                //numeros
+                var res = document.querySelector('div.res')
+                var um = document.querySelector('input#botao01')
+                var dois = document.querySelector('input#botao02')
+                var tres = document.querySelector('input#botao03')
+                var quatro = document.querySelector('input#botao04')
+                var cinco = document.querySelector('input#botao05')
+                var seis = document.querySelector('input#botao06')
+                var sete = document.querySelector('input#botao07')
+                var oito = document.querySelector('input#botao08')
+                var nove = document.querySelector('input#botao09')
+                var zero = document.querySelector('input#botao00')
+                um.addEventListener('click', clicarum)
+                //operações
+                
+                //Funções
+                function clicarum() {
+                    res.innerHTML += `1`
+                }
+
+            </script>
+</body>
+
+</html>
