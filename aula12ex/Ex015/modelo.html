@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Modelo de Exercício</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <header>
         <h1>Verificador de Idade
@@ -14,15 +16,22 @@
     </header>
     <section>
         <div id="info">
-           <p> Ano de Nascimento: <input type="number" name="ano" id="ano00" value="1950"></p>
-        <p>Sexo: <input type="radio" name="sexo" id="masc00"> <span>Masculino</span> <input type="radio" name="sexo" id="fem00"> <span> Feminino </span> </p>
-        <p> <input type="button" name="botao" id="verificar" value="Verificar"> </p>
+            <p> Ano de Nascimento:
+                <input type="number" name="ano" id="ano00" value="1999">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="sexo" id="masc00">
+                <label for="masc00">Masculino</label>
+                <input type="radio" name="sexo" id="fem00">
+                <label for="fem00"> Feminino </label>
+            </p>
+            <p>
+                <input type="button" name="botao" id="verificar" value="Verificar" onclick="verificar()">
+            </p>
         </div>
-        <div id="msg">
-            Selecione o ano de nascimento.
-        </div>
-        <div id="foto">
-            <img src="interrogacao.png" alt="imagem de interrogacao"> 
+        <div id="res">
+           <p>Preencha os dados acima para ver o resultado.</p>
+            <img src="interrogacao.png" alt="imagem de interrogacao" id="imagem">
         </div>
     </section>
     <footer>
@@ -30,4 +39,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
