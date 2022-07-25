@@ -15,7 +15,7 @@ function verificar() {
             genero = 'Masculino'
             if (idade >= 0 && idade < 4) {
                 img.setAttribute('src', 'bebe.png')
-            } else if (idade < 10) {
+            } else if (idade <= 10) {
                 img.setAttribute('src', 'criancam.png')
             } else if (idade <= 17) {
                 img.setAttribute('src', 'adolescentem.png')
@@ -31,8 +31,8 @@ function verificar() {
         } else if (fsex[1].checked) {
             genero = 'Feminino'
             if (idade >= 0 && idade < 4) {
-                img.src = 'bebe.png'
-            } else if (idade < 10) {
+                img.setAttribute('src', 'bebe.png')
+            } else if (idade <= 10) {
                 img.setAttribute('src', 'criancaf.png')
             } else if (idade <= 17) {
                 img.setAttribute('src', 'adolescentef.png')
@@ -53,9 +53,11 @@ function verificar() {
             } else {
                 window.alert('[ERRO] Sexo: Inválido!')
             }
-        } else {
-            res.innerHTML = `<p>Essa pessoa está provavelmente morta!</p>`
+        } else if (fsex[1].checked || fsex[0].checked){
+            res.innerHTML = `<p>Essa pessoa de ${idade} anos está provavelmente morta!</p>`
             res.appendChild(img)
+        } else {
+            window.alert('[ERRO] Sexo: Inválido!')
         }
     }
 }
