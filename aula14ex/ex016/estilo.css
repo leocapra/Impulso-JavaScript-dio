@@ -29,3 +29,7 @@ div {
     text-align: left;
 }
 
+div#res {
+    display: flex;
+    flex-direction: column;
+}
