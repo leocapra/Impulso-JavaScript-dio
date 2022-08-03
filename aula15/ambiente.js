@@ -1,5 +1,5 @@
 let num = [5,8,2,9,3]
-
+/*
 num.sort() //ordena
 num.push(1) //add
 
@@ -12,3 +12,12 @@ console.log(`O primeiro valor do ventor é ${num[0]}`) //mostra o primeiro vetor
 for (let c = 0 ; c < num.length ; c++) {
     console.log(num[c])
 }  //do alone
+
+*/
+
+for (let c in num) {
+    console.log(num[c]) //mesma coisa q o for de cima
+}
+
+let pos = num.indexOf(4)
+console.log(`O valor 8 está na posição ${pos}`) //-1 é igual a valor não encontrado
