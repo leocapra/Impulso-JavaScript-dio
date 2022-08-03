@@ -1,4 +1,4 @@
-let num = [5,8,2,9,3]
+let num = [5, 8, 2, 9, 3]
 /*
 num.sort() //ordena
 num.push(1) //add
@@ -16,8 +16,12 @@ for (let c = 0 ; c < num.length ; c++) {
 */
 
 for (let c in num) {
-    console.log(num[c]) //mesma coisa q o for de cima
+    console.log(`Na posição ${c} está o valor ${num[c]}`) //mesma coisa q o for de cima
 }
 
-let pos = num.indexOf(4)
-console.log(`O valor 8 está na posição ${pos}`) //-1 é igual a valor não encontrado
+let pos = num.indexOf(1)
+if (pos == -1) {
+    console.log('O valor não existe!')
+} else {
+    console.log(`O valor está na posição ${pos}`)
+} //-1 é igual a valor não encontrado
